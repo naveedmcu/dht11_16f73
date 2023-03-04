@@ -1,0 +1,282 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028     @INTERRUPT_AREA
+029     @INTERRUPT_AREA
+02A     @INTERRUPT_AREA
+02B-03A message1
+03B-04A message2
+04B.0   Time_out
+04C     T_byte1
+04D     T_byte2
+04E     RH_byte1
+04F     RH_byte2
+050     CheckSum
+051-064 digit
+065     digit_one
+066     digit_two
+067     digit_three
+068     digit_four
+069     digit_five
+06A     digit_six
+06B     sec
+06C     min
+06D     hour
+06E     active_timer
+06F     timer2a
+070     cnt
+071     cnt1
+072     on_time_sec
+073     on_time_min
+074     on_time_hour
+075     off_time_sec
+076     off_time_min
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     off_time_hour
+07C     counter_sec
+07D     counter_min
+07E     counter_hour
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0A3 one_sec_counter
+0A4     dataReady
+0A5-0A6 temp_high
+0A7-0A8 temp_low
+0A9-0AA hum_high
+0AB-0AC hum_low
+0AD-0AE menu_counter
+0AF-0B0 main_temp
+0B1-0B2 main_hum
+0B3-0B4 temp_down_set.press_counter
+0B5-0B6 temp_up_set.press_counter
+0B7-0B8 hum_up_set.press_counter
+0B9-0BA hum_down_set.press_counter
+0BB-0BC @sprintf_string
+0BD     TIMER0_isr.number_of_segment
+0BE     @TRIS_C
+0BF     lcd_init.i
+0BF     @DIV88.P1
+0BF-0C0 fill_display_buff.data
+0BF     Read_Data.i
+0BF     @PSTRINGCN7_9600_62_63.P1
+0BF-0C0 @PRINTF_LU_9600_62_63.P2
+0BF     dht_display.@SCRATCH1
+0BF     temp_down_set.@SCRATCH1
+0BF     temp_up_set.@SCRATCH1
+0BF     hum_up_set.@SCRATCH1
+0BF     hum_down_set.@SCRATCH1
+0BF     MAIN.@SCRATCH1
+0BF     menu.@SCRATCH1
+0BF     dht11_RunTime.@SCRATCH1
+0BF     @PSTRINGC7_621.@SCRATCH1
+0BF     @PSTRINGR_621.@SCRATCH1
+0C0     @DIV88.P1
+0C0     Read_Data.k
+0C0-0C3 lcd_init.LCD_INIT_STRING
+0C0     dht11_RunTime.@SCRATCH2
+0C0     @PSTRINGC7_621.@SCRATCH2
+0C0     @PSTRINGCN7_9600_62_63.@SCRATCH1
+0C0     @PSTRINGR_621.@SCRATCH2
+0C1     Read_Data._data
+0C1     fill_display_buff.titale
+0C1     @MUL88.P1
+0C1     @DIV88.@SCRATCH1
+0C1     @PSTRINGC7_621.@SCRATCH3
+0C1     @PSTRINGCN7_9600_62_63.@SCRATCH2
+0C1     @PRINTF_LU_9600_62_63.@SCRATCH1
+0C2     lcd_putc.c
+0C2     @MUL88.P1
+0C2     Read_Data.@SCRATCH1
+0C2     fill_display_buff.@SCRATCH1
+0C2     @PSTRINGC7_621.@SCRATCH4
+0C2     @PSTRINGCN7_9600_62_63.@SCRATCH3
+0C2     @PRINTF_LU_9600_62_63.@SCRATCH2
+0C3     lcd_gotoxy.x
+0C3     fill_display_buff.@SCRATCH2
+0C3     @PSTRINGCN7_9600_62_63.@SCRATCH4
+0C3     @PRINTF_LU_9600_62_63.@SCRATCH3
+0C4     @delay_ms1.P1
+0C4     lcd_gotoxy.y
+0C4-0C5 @DIVS1616.P1
+0C4     lcd_init.@SCRATCH1
+0C4     @PRINTF_LU_9600_62_63.@SCRATCH4
+0C5     lcd_gotoxy.address
+0C5     @PRINTF_LU_9600_62_63.@SCRATCH5
+0C6-0C7 @DIVS1616.P1
+0C6     lcd_gotoxy.@SCRATCH1
+0C6     @PRINTF_LU_9600_62_63.@SCRATCH6
+0C7     lcd_send_byte.address
+0C7     @PRINTF_LU_9600_62_63.@SCRATCH7
+0C8     lcd_send_byte.n
+0C8     @DIVS1616.@SCRATCH1
+0C9     lcd_read_byte.low
+0C9     lcd_send_byte.@SCRATCH1
+0C9     @DIVS1616.@SCRATCH2
+0CA     lcd_send_nibble.n
+0CA     lcd_read_byte.high
+0CB     lcd_read_nibble.n
+0CB     lcd_read_byte.@SCRATCH1
+0CC     lcd_read_nibble.@SCRATCH1
+0CD     TIMER0_isr.@SCRATCH1
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+107F     @INTERRUPT_AREA
+10FF     @INTERRUPT_AREA
+117F     @INTERRUPT_AREA
+11FF     @INTERRUPT_AREA
+127F     @INTERRUPT_AREA
+12FF     @INTERRUPT_AREA
+137F     @INTERRUPT_AREA
+13FF     @INTERRUPT_AREA
+147F     @INTERRUPT_AREA
+14FF     @INTERRUPT_AREA
+157F     @INTERRUPT_AREA
+15FF     @INTERRUPT_AREA
+167F     @INTERRUPT_AREA
+16FF     @INTERRUPT_AREA
+177F     @INTERRUPT_AREA
+17FF     @INTERRUPT_AREA
+187F     @INTERRUPT_AREA
+18FF     @INTERRUPT_AREA
+197F     @INTERRUPT_AREA
+19FF     @INTERRUPT_AREA
+1A7F     @INTERRUPT_AREA
+1AFF     @INTERRUPT_AREA
+1B7F     @INTERRUPT_AREA
+1BFF     @INTERRUPT_AREA
+1C7F     @INTERRUPT_AREA
+1CFF     @INTERRUPT_AREA
+1D7F     @INTERRUPT_AREA
+1DFF     @INTERRUPT_AREA
+1E7F     @INTERRUPT_AREA
+1EFF     @INTERRUPT_AREA
+1F7F     @INTERRUPT_AREA
+1FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+00004F  @const714.call
+000055  @const722.call
+00005F  @const728.call
+000068  @const729.call
+00006E  @const730.call
+000076  TIMER0_isr
+0000E3  @goto64821
+0000ED  @delay_ms1
+000101  lcd_send_nibble
+000137  lcd_read_nibble
+00016A  lcd_send_byte
+000172  lcd_read_byte
+0001CC  lcd_init
+000220  lcd_gotoxy
+000234  lcd_putc
+00026E  @DIVS1616
+0002AE  fill_display_buff
+0003DA  menu
+00041C  dht_display
+000443  temp_up_set
+0004A9  temp_down_set
+00050E  hum_up_set
+000574  hum_down_set
+0005FC  display_err
+000680  display_ok
+00069E  Read_Data
+000700  @PSTRINGC7_621
+000774  @DIV88
+00078B  @MUL88
+0007B2  @PSTRINGR_621
+000800  @PSTRINGCN7_9600_62_63
+00087C  @PRINTF_LU_9600_62_63
+0008D9  dht11_RunTime
+0008DA  start_signal
+0008F1  check_response
+000A5D  runtime_relay_function
+000AB8  MAIN
+000AB8  @cinit1
+000ADF  @cinit2
+
+Project Directory:
+    C:\Users\HP\Documents\dht11\
+
+Project Files:
+    main.c                                                  [12-Jan-23 14:39  CRC=84834D00]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [24-Feb-17 16:21  CRC=6248FE08]
+    ..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c      [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=8A18BA1C
+Program memory checksum=0341
+Program memory CRC=D998
+Hex file CRC=35B8
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
